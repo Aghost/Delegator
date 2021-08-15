@@ -1,4 +1,6 @@
-namespace Delegator.Services
+using Delegator.Entities;
+
+namespace Delegator.App.Services
 {
     interface IUserService
     {
