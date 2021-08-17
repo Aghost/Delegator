@@ -11,10 +11,14 @@ namespace Delegator.App.Services
         }
 
         public void Save(User usr) {
+            if (Validate(usr) == true) { userRepository.Add(user) }
         }
 
         public bool Validate(User usr) {
-            return false;
+            if (usr == null || string.IsNullOrEmpty(usr.LastName) || string.IsNullOrEmpty(usr.EmailAddress))
+                throw new ArgumentNullException();
+
+            // if (repository.Users?.contains usr)
         }
     }
 }

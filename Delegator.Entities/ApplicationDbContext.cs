@@ -7,7 +7,6 @@ namespace Delegator.Entities
     public class ApplicationDbContext : DbContext {
         public DbSet<User> Users { get; set;}
         
-        protected override void OnConfiguring(DbContextOptionsBuilder options) {
-        }
+        protected override void OnConfiguring(DbContextOptionsBuilder options) { }
     }
 }
